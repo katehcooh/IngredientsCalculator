@@ -3,6 +3,9 @@
 ## Description
 This application was created for people who are baking cakes. It serves to convert the proportions of ingredients contained in the recipe for another baking form. 
 
+## Online view
+https://katehcooh.github.io/IngredientsCalculator/
+
 ## Technologies/ frameworks
 * HTML
 * CSS
