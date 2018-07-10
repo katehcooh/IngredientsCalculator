@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Baking mold calculator</title>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="counting-app.js"></script>	
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Lobster" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="nav">
+			<ul>
+				<li><a href="https://github.com/katehcooh/">git hub</a></li>
+			</ul>
+		</div>
+		<div class="content">			
+			<h1>Calculate the amount of ingredients you need</h1>			
+			<div class="options">
+			<!-- INPUT OPTIONS -->
+				<div class="recipe-mold">
+					<h2>the baking mold used in the recipe</h2>
+					<hr/>
+						<form class="input-data">
+							<label for="circle-recipe">
+							<input type="radio" id="circle-recipe" name="mold1">cake tin</label>
+							<label for="rectangle-recipe">
+							<input type="radio" id="rectangle-recipe" name="mold1">baking sheet</label>
+						</form>
+				</div>
+				<div class="circle-recipe-section">
+					<p>
+						<form class="input-data">
+							<label for="diameter-recipe">the diameter of the baking mold used in recipe: </label>
+							<input type="number" min="1" step="0.01" id="diameter-recipe"> 
+							<span>centimeters</span>
+						</form>
+					</p>							
+				</div>
+				<div class="rectangle-recipe-section">
+					<p>
+						<form class="input-data">
+							<label for="length-a-recipe">dimensions of the baking mold used in recipe: </label>
+							<input class="input-number–noSpinners" type="number" id="length-a-recipe"> 
+							<span> x </span>
+							<label for="length-b-recipe"></label>
+							<input type="number" min="1" step="0.01" id="length-b-recipe"> 
+							<span>centimeters</span>
+						</form>
+					</p>	
+				</div>
+				<!-- OUTPUT OPTIONS -->
+				<div class="user-mold">
+					<h2>the baking mold which you will use</h2>
+					<hr/>					
+						<form class="input-data">
+						
+							<label for="circle-user">
+							<input type="radio" id="circle-user" name="mold2">cake tin</label>
+							
+							<label for="rectangle-user">
+							<input type="radio" id="rectangle-user" name="mold2">baking sheet</label>
+						</form>
+				</div>
+				<div class="circle-user-section">
+					<p>
+						<form class="input-data">
+							<label for="diameter-user">the diameter of your baking mold: </label>
+							<input type="number" min="1" step="0.01" id="diameter-user"> 
+							<span>centimeters</span>
+						</form>
+					</p>							
+				</div>
+				<div class="rectangle-user-section">
+					<p>
+						<form class="input-data">
+							<label for="length-a-user">dimensions of your baking mold: </label>
+							<input type="number" min="1" step="0.01" id="length-a-user"> 
+							<span> x </span>
+							<label for="length-b-user"></label>
+							<input type="number" min="1" step="0.01" id="length-b-user"> 
+							<span>centimeters</span>
+						</form>
+					</p>	
+				</div>			
+			</div>
+			<div class="ingredients-section">
+				<!-- DATA -->
+				<h2>list of ingredients from the recipe and their values</h2>
+				<hr/>
+				<div class="particular-ingredient-area">				
+					<form class="input-data">
+						<label for="ingredient">ingredient: </label>
+						<input type="text" id="ingredient">
+						<label for="quantity">quantity: </label>
+						<input type="number" min="1" step="0.01" id="quantity">
+						<label for="unit">unit: </label>
+						<input type="text" id="unit">
+					</form>
+					
+				</div>
+				<div class="particular-ingredient-area">
+					<form class="input-data">
+						<label for="ingredient">ingredient: </label>
+						<input type="text" id="ingredient">
+						<label for="quantity">quantity: </label>
+						<input type="number" min="1" step="0.01" id="quantity">
+						<label for="unit">unit: </label>
+						<input type="text" id="unit">
+					</form>
+				</div>
+				<div class="particular-ingredient-area">
+					<form class="input-data">
+						<label for="ingredient">ingredient: </label>
+						<input type="text" id="ingredient">
+						<label for="quantity">quantity: </label>
+						<input type="number" min="1" step="0.01" id="quantity">
+						<label for="unit">unit: </label>
+						<input type="text" id="unit">
+					</form>
+				</div>
+				<div class="particular-ingredient-area">
+					<form class="input-data">
+						<label for="ingredient">ingredient: </label>
+						<input type="text" id="ingredient">
+						<label for="quantity">quantity: </label>
+						<input type="number" min="1" step="0.01" id="quantity">
+						<label for="unit">unit: </label>
+						<input type="text" id="unit">
+					</form>
+				</div>				
+			</div>
+			<!-- BUTTONS -->
+			<div class="buttons-section">
+				<button class="btn" id="clear">clear form</button>
+				<button class="btn" id="more">more ingredients</button>
+				<button class="btn" id="accept">convert</button>
+			</div>
+			<div class="alert-section">
+				<p id="convert-alert"></p>
+			</div>
+			<div class="output-recipe-section">	
+				<h2>you will need ... </h2>
+				<hr/>
+				<div id="ingredients-list">
+				</div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>
