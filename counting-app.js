@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	// calculations of surface areas	
 	function recipeCircleArea() {
-		var recipeCircleArea = (Math.pow((diameterRecipe.value/2),2))*3.14;
+		var recipeCircleArea = (Math.pow((diameterRecipe.value/2),2))*Math.PI;
 		return recipeCircleArea;
 	}	
 	
 	function userCircleArea() {
-		var userCircleArea = (Math.pow((diameterUser.value/2),2))*3.14;
+		var userCircleArea = (Math.pow((diameterUser.value/2),2))*Math.PI;
 		return userCircleArea;
 	}		
 	
