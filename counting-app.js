@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	//  add ingredients function	
 	function addIngredient() {		
+		var ingredient = document.querySelectorAll('#ingredient');
 		var newIngredientArea = document.createElement('div');
 		ingredientsSection.appendChild(newIngredientArea);	
 		newIngredientArea.classList.add('particular-ingredient-area');
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var ingredientLabel = document.createElement('label');
 		newIngredientForm.appendChild(ingredientLabel);
 		ingredientLabel.setAttribute = ('for', 'ingredient');
-		ingredientLabel.innerHTML = 'ingredient: ';
+		ingredientLabel.innerHTML = (ingredient.length+1) + '. ingredient: ';
 		var ingredientInput = document.createElement('input');
 		newIngredientForm.appendChild(ingredientInput);
 		ingredientInput.type = 'text';
@@ -167,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				if (quantity[i].value.length > 0) {					
 					var message = document.createElement('p');
 					ingredientsList.appendChild(message);				
-					message.innerHTML = "- " + ingredient[i].value + ' ' + (quantity[i].value/proportion()).toFixed(2) + ' ' + unit[i].value;
+					message.innerHTML = (i+1) + ". " + ingredient[i].value + ' ' + (quantity[i].value/proportion()).toFixed(2) + ' ' + unit[i].value;
 				}
 			}	
 			recipeSection.classList.add('visible');
